@@ -8,8 +8,6 @@
 	<string>abstract</string>
 	<key>scope</key>
 	<string>source.nemerle</string>
-	<key>scope</key>
-	<string>source.nemerle</string>
 	<key>tabTrigger</key>
 	<string>abs</string>
 	<key>uuid</key>

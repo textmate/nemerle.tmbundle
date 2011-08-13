@@ -12,8 +12,6 @@
 	<string>if ... else</string>
 	<key>scope</key>
 	<string>source.nemerle</string>
-	<key>scope</key>
-	<string>source.nemerle</string>
 	<key>tabTrigger</key>
 	<string>if</string>
 	<key>uuid</key>

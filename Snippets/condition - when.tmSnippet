@@ -11,8 +11,6 @@
 	<string>when</string>
 	<key>scope</key>
 	<string>source.nemerle</string>
-	<key>scope</key>
-	<string>source.nemerle</string>
 	<key>tabTrigger</key>
 	<string>when</string>
 	<key>uuid</key>
