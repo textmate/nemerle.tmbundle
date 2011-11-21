@@ -6,10 +6,6 @@
 	<array>
 		<string>n</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>(\{|(|&lt;\[)</string>
-	<key>foldingStopMarker</key>
-	<string>(\}|)|]&gt;)</string>
 	<key>keyEquivalent</key>
 	<string>^~N</string>
 	<key>name</key>
