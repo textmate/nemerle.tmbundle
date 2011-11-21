@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "Compile Macro" "Nemerle"
-require_cmd ncc
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-ncc -r:Nemerle.Compiler -t:library "$TM_FILEPATH" -o "$TM_FILEPATH".dll</string>
+. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "Compile Macro" "Nemerle"
+
+"${TM_NEMERLE:-ncc}" -r:Nemerle.Compiler -t:library "$TM_FILEPATH" -o "$TM_FILEPATH".dll</string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@R</string>
 	<key>name</key>
 	<string>Compile Macro</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>ncc</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/ncc</string>
+				<string>/usr/local/bin/ncc</string>
+			</array>
+			<key>variable</key>
+			<string>TM_NEMERLE</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.nemerle</string>
 	<key>uuid</key>
 	<string>BBD358C1-4FB6-11DB-ADD3-00112474B8F0</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
