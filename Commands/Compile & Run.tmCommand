@@ -44,6 +44,8 @@ html_footer</string>
 	</array>
 	<key>scope</key>
 	<string>source.nemerle</string>
+	<key>semanticClass</key>
+	<string>process.run.nemerle</string>
 	<key>uuid</key>
 	<string>AF355E00-4F11-11DB-B7AC-00112474B8F0</string>
 	<key>version</key>

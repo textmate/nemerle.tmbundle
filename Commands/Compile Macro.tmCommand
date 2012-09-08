@@ -42,6 +42,8 @@ html_header "Compile Macro" "Nemerle"
 	</array>
 	<key>scope</key>
 	<string>source.nemerle</string>
+	<key>semanticClass</key>
+	<string>process.build.nemerle</string>
 	<key>uuid</key>
 	<string>BBD358C1-4FB6-11DB-ADD3-00112474B8F0</string>
 	<key>version</key>

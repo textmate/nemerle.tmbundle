@@ -42,6 +42,8 @@ html_header "Compile Library" "Nemerle"
 	</array>
 	<key>scope</key>
 	<string>source.nemerle</string>
+	<key>semanticClass</key>
+	<string>process.build.nemerle</string>
 	<key>uuid</key>
 	<string>04046396-4FB2-11DB-ADD3-00112474B8F0</string>
 	<key>version</key>
