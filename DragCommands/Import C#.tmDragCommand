@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>require_cmd cs2n
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-cs2n -n "$TM_DROPPED_FILE" -o tmpCs2N
+${TM_CS2N:=cs2n} -n "$TM_DROPPED_FILE" -o tmpCs2N
 cat tmpCs2N
 rm -f tmpCs2N</string>
 	<key>draggedFileExtensions</key>
@@ -20,6 +21,20 @@ rm -f tmpCs2N</string>
 	<string>Import C#</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>cs2n</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/cs2n</string>
+				<string>/usr/local/bin/cs2n</string>
+			</array>
+			<key>variable</key>
+			<string>TM_CS2N</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.nemerle</string>
 	<key>uuid</key>
